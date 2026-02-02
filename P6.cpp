@@ -19,6 +19,16 @@ int main(){
         cout << ch << " is not an alphabet letter." <<endl;
     }
 
+
+    cout << " ---------------------- Turnary Operator Practice ----------------------" << endl;
+    //syntax of turnary operator
+    // condition ? expression_if_true : expression_if_false;
+
+    cout << " enter a number to check if it is even or odd using turnary operator: " << endl;
+    int num;
+    cin >> num;
+    cout << num << " is " <<( (num % 2 == 0) ? "even" : "Odd") << endl;
+    
     return 0;
  }
     

@@ -10,6 +10,7 @@ int factorial(int num){
         num--;
     }
     return fact;
+//test case values 5 and 3 as 5!=120, 3!= 6, 5-3!=2, C = 120/6*2 = 120/12=10 so C=10
 
 }
 

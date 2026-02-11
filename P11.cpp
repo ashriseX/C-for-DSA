@@ -7,6 +7,10 @@ void helloWorld(){
     return;
 }
 
+int addNum(int a, int b){
+    return a+b;
+}
+
 int main(){
 
     helloWorld();

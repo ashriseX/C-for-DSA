@@ -5,7 +5,7 @@ using namespace std;
 
 template<typename T>
  template<Node N>
- 
+
 class Node{
 
     T data;

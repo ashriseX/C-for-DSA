@@ -60,19 +60,7 @@ class List{
         }
 
     //method to print the list
-        void displayList(){
-            Node *temp = head;
-            cout << "Start of the list:" << endl;
-            while(temp != NULL){
-                cout << " " << temp->data;
-                temp = temp->next;
-            }
-
-        cout << "\n End of the list." << endl;
-
-        return;
-
-        }
+        
 
     //destructor
     ~List(){

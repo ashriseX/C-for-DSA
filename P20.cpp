@@ -31,7 +31,7 @@ class List{
         //function to add the node at the end of the list
         void addAtEnd(int data){
             Node* nn = new Node(data);
-            if(head == NUL){
+            if(head == NULL){
                 head = nn;
                 return;
             }
@@ -53,11 +53,20 @@ class List{
             }
         }
 
-        //function to delete the node at the nth position from the end of the list without using the counter variable
-        void deleteNthFromEnd(int n){
-            Node* temp = head;
-            Node* fast = head;
-            Node* slow = head;
-            
-        }
-};
+        };
+    
+
+
+int main(){
+    List l;
+    l.addAtEnd(1);
+    l.addAtEnd(2);
+    l.addAtEnd(3);
+    l.addAtEnd(4);
+    l.addAtEnd(5);
+
+    cout << "The list is: " << endl;
+    l.display();
+
+    return 0;
+}

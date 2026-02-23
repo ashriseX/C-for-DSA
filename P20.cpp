@@ -52,6 +52,19 @@ class List{
                 temp = temp->next;
             }
         }
+/*
+        Node* listMidPoint(){
+            Node* slow = head;
+            Node* fast = head;
+
+            while(fast->next->next != NULL || fast!= NULL){
+                fast = fast->next->next;
+                slow = slow->next;
+            }
+
+            return slow;
+            
+            }*/
 
         };
     
@@ -64,9 +77,22 @@ int main(){
     l.addAtEnd(3);
     l.addAtEnd(4);
     l.addAtEnd(5);
+    l.addAtEnd(10);
+    l.addAtEnd(20);
+    l.addAtEnd(30);
+    l.addAtEnd(40);
+    l.addAtEnd(50);
+
+
+
 
     cout << "The list is: " << endl;
     l.display();
+
+    
+  //  cout << "the mid point of the list is: " << l.listMidPoint()->data << endl;
+   // cout << l.listMidPoint()->data << " data in the middle node" << endl;
+    
 
     return 0;
 }

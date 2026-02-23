@@ -89,6 +89,24 @@ class List{
             return slow;
             
             }*/
+           Node* listMidPoint(){
+            Node* fast = head;
+            Node* slow = head;
+
+            if(head == NULL){
+                cout << "The list is empty!" << endl;
+                return NULL;
+            }
+
+            while(fast != NULL && fast->next != NULL){
+                fast = fast->next->next;
+                slow = slow->next;
+
+            }
+
+            return slow;
+
+        }
 
             //function to reverse a list
             void reverseList(){
@@ -139,6 +157,9 @@ class List{
                 return revList;
             }
 
+
+
+
                 
         };
 
@@ -155,8 +176,8 @@ int main(){
     l.addAtEnd(10);
     l.addAtEnd(20);
     l.addAtEnd(30);
-    l.addAtEnd(40);
-    l.addAtEnd(50);
+    //l.addAtEnd(40);
+    //l.addAtEnd(50);
 
 
 
@@ -168,6 +189,8 @@ int main(){
     List* revList = l.listReverse();
     revList->display();
     
+    Node* ptr = revList->listMidPoint();
+    cout << ptr << " this is the address of midpoint node, and the sat on it is " << ptr->data << endl;
   //  cout << "the mid point of the list is: " << l.listMidPoint()->data << endl;
    // cout << l.listMidPoint()->data << " data in the middle node" << endl;
     

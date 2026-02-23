@@ -44,6 +44,25 @@ class List{
             }
         }
 
+        //overload 
+        void addAtEnd(Node* ptr){
+            
+            Node* nn = new Node(ptr->data);
+            if(head== NULL){
+                head = nn;
+                return;
+            }
+            else{
+                Node* temp = head;
+                while(temp->next != NULL){
+                    temp = temp->next;
+                }
+                temp->next = nn;
+            }
+
+
+        }
+
         //function to display the list
         void display(){
             Node* temp = head;
@@ -52,6 +71,11 @@ class List{
                 temp = temp->next;
             }
         }
+
+      
+
+
+
 /*
         Node* listMidPoint(){
             Node* slow = head;
@@ -66,7 +90,58 @@ class List{
             
             }*/
 
+            //function to reverse a list
+            void reverseList(){
+
+                Node* prev = NULL;
+                Node* curr = head;
+                Node* nexN = NULL;
+
+                while(curr != NULL){
+                    nexN = curr->next;
+                    curr->next = prev;
+
+                    prev = curr;
+                    curr = nexN;
+
+                }
+
+                head = prev;
+                return;
+
+            }
+
+            //function to create a new List containing the reverse image of original
+            List* listReverse(){
+                List* revList = new List();
+
+                Node* temp = head;
+               
+
+
+                while(temp->next != NULL){
+                    temp = temp->next;
+                }
+                do{
+                    Node* tempPrev = head;
+
+                    while(tempPrev->next != temp && tempPrev != temp){
+                        tempPrev = tempPrev->next;
+                    }
+
+                    revList->addAtEnd(temp);
+                    temp = tempPrev;
+                    }while(temp != head);
+
+                    revList->addAtEnd(head);
+
+                    
+                return revList;
+            }
+
+                
         };
+
     
 
 
@@ -88,7 +163,10 @@ int main(){
 
     cout << "The list is: " << endl;
     l.display();
+    cout << endl;
 
+    List* revList = l.listReverse();
+    revList->display();
     
   //  cout << "the mid point of the list is: " << l.listMidPoint()->data << endl;
    // cout << l.listMidPoint()->data << " data in the middle node" << endl;
